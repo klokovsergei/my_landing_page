@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Сергей Клоков — IT-специалист для малого бизнеса</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- Шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+    />
+
+    <!-- Flask CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<div class="page">
+
+    <!-- Sticky mobile contact button -->
+    <div class="sticky-contact">
+        <a href="#contacts" class="btn btn-primary">Контакты</a>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <div class="logo-mark">SK</div>
+                    <div>
+                        <div>Сергей Клоков</div>
+                        <div class="logo-sub">IT-специалист для малого бизнеса</div>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <a href="#hero">Главная</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#cases-main">Кейсы</a>
+                    <a href="#blog-page">Блог</a>
+                    <a href="#contacts">Контакты</a>
+                </nav>
+
+                <a href="https://t.me/klokovsergey" class="btn btn-outline header-cta" target="_blank">
+                    Написать в Telegram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-inner fade-in">
+                    <div class="hero-left">
+                        <div class="hero-badge">
+                            <span class="hero-badge-dot"></span>
+                            Автоматизация и IT-решения для малого бизнеса
+                        </div>
+
+                        <h1 class="hero-title">
+                            IT, телефония и автоматизация, которые работают, экономят время и снижают ошибки
+                        </h1>
+
+                        <p class="hero-subtitle">
+                            Если теряются звонки, сотрудники ведут клиентов в Excel,
+                            а всё держится на ручных процессах — помогу выстроить понятную
+                            и рабочую систему. Настраиваю АТС, CRM, аналитику и автоматизацию,
+                            чтобы бизнес работал быстрее, стабильнее и без хаоса.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a href="#contacts" class="btn btn-primary">Обсудить задачу</a>
+                            <a href="#cases-main" class="btn btn-outline">Смотреть решения</a>
+                        </div>
+
+                        <div class="hero-note">
+                            ✔ 10+ внедрённых АТС  ✔ Telegram-боты и автоматизация  ✔ Реальные результаты
+                        </div>
+                    </div>
+
+                    <div class="hero-right fade-in fade-in-delay-1">
+                        <div class="hero-panel">
+                            <div class="hero-panel-title">Что можно улучшить в бизнесе</div>
+                            <ul class="hero-panel-list">
+                                <li><span class="hero-panel-bullet"></span>
+                                    <span>Телефония без пропусков</span></li>
+                                <li><span class="hero-panel-bullet"></span>
+                                    <span>Связка АТС и CRM: звонки, записи и аналитика в одном месте.</span></li>
+                                <li><span class="hero-panel-bullet"></span>
+                                    <span>Удобные таблицы и финансовые модели для быстрых решений.</span></li>
+                                <li><span class="hero-panel-bullet"></span>
+                                    <span>Python-скрипты и автоматизация отчётов, задач и рутины.</span></li>
+                                <li><span class="hero-panel-bullet"></span>
+                                    <span>Настройка AI-инструментов и промпт-инжиниринг под задачи.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <div class="section-kicker">О себе</div>
+                </div>
+
+                <div class="about-grid fade-in fade-in-delay-1">
+                    <div class="about-text">
+                        <p>Я — специалист по IT-интеграциям и автоматизации с более чем 10-летним опытом в телеком-сфере
+                            и малом бизнесе. Работал с компаниями из разных отраслей: производство, услуги, дистрибуция,
+                            маркетплейсы, печать, туризм.</p>
+
+                        <p>Моя ключевая экспертиза — настройка телефонии, CRM, автоматизации процессов и аналитики.
+                            Настраиваю облачную АТС, Bitrix24, разрабатываю Python-автоматизации и Excel-модели под
+                            задачи бизнеса.</p>
+
+                        <p>Реализованные задачи включают: настройку SIP-телефонии, интеграцию CRM и телефонии,
+                            автоматизацию производственных процессов и создание инструментов анализа продаж и
+                            клиентского поведения на основе данных.</p>
+
+                        <p>Часто подключаюсь после частично сделанных или незавершённых внедрений: привожу систему в
+                            рабочее состояние, оптимизирую процессы и делаю использование понятным для команды.</p>
+
+                        <p>Задача моей работы — обеспечить предсказуемость процессов, прозрачность данных и стабильную
+                            техническую инфраструктуру, на которую можно опираться в управлении бизнесом.</p>
+                        <div class="about-note">
+                            Формат работы — от разовых задач до комплексного сопровождения малого бизнеса.
+                        </div>
+                    </div>
+
+                    <div class="about-photo-placeholder">
+                        <img src="{{ url_for('static', filename='img/me.jpg') }}" alt="Сергей Клоков"
+                             class="about-photo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES -->
+        <section id="services" class="section-alt-bg">
+            <div class="container">
+                <div class="section-title fade-in">
+                    <div class="section-kicker">Услуги</div>
+                    <h2>Чем я занимаюсь</h2>
+                </div>
+
+                <div class="services-grid fade-in fade-in-delay-1">
+                    <article class="service-card">
+                        <div class="service-icon">☎</div>
+                        <div class="service-title">Настройка АТС</div>
+                        <p>Без пропущенных звонков и хаоса.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🔗</div>
+                        <div class="service-title">Интеграции</div>
+                        <p>ATS + CRM + аналитика в одном месте.</p>
+                    </article>
+
+                    <article class="service-card">
+                        <div class="service-icon">🐍</div>
+                        <div class="service-title">Python-скрипты</div>
+                        <p>Очистка выгрузок, автоматизация отчётов.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTS -->
+        <section id="contacts" class="contacts-section">
+            <div class="container">
+                <div class="contacts-grid fade-in">
+                    <div>
+                        <div class="section-kicker">Контакты</div>
+                        <h2>Связаться со мной</h2>
+                        <p>
+                            Не обязательно разбираться в деталях — это моя зона.<br>Просто позвоните или напишите —
+                            дальше
+                            всё уточню.
+                        </p>
+
+                        <ul class="contacts-list">
+                            <li class="contacts-item copy-email" data-email="klokovsergey@gmail.com">
+                                <span class="contact-icon">✉</span>
+                                <span>Email: klokovsergey@gmail.com</span>
+                            </li>
+                            <li class="contacts-item">
+                                <span class="contact-icon">📞</span>
+                                <span>Телефон:
+                    <a href="tel:+79052698889" class="contact-link phone-link">+7 (905) 269-88-89</a>
+                </span>
+                            </li>
+
+                            <li class="contacts-item">
+                                <span class="contact-icon">📲</span>
+                                <span>Telegram-канал:
+                    <a href="https://t.me/CleanAsJSON"
+                       target="_blank"
+                       class="contact-link">@CleanAsJSON</a>
+                </span>
+                            </li>
+                        </ul>
+
+                        <div class="contacts-actions">
+                            <a href="https://t.me/klokovsergey" target="_blank" class="btn btn-primary">Написать</a>
+                            <a href="#hero" class="btn btn-outline">Наверх</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="copy-toast" class="copy-toast">Скопировано!</div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div>© 2025 · Сергей Клоков</div>
+                <div>ATS · CRM · Python · Автоматизация</div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    document.querySelector(".copy-email").addEventListener("click", async () => {
+        const email = document.querySelector(".copy-email").dataset.email;
+        await navigator.clipboard.writeText(email);
+
+        const toast = document.getElementById("copy-toast");
+        toast.classList.add("show");
+
+        setTimeout(() => toast.classList.remove("show"), 1200);
+    });
+</script>
+
+</body>
+</html>
