@@ -1,0 +1,48 @@
+# Environment
+.env
+*.env.*
+.envrc
+
+# Logs
+*.log
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.mypy_cache/
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Runtime / Cache
+.cache/
+tmp/
+.ipynb_checkpoints/
+
+# Web runtime
+instance/
+media/
+static/uploads/
+
+# Docker
+docker-compose.override.yml
+*.pid
+
+/static/img
+
+
+# Mac OS
+.DS_Store
+
+
+*.pyc
+*.pyo
+*.rdb
+
