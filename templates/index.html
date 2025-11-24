@@ -5,6 +5,14 @@
     <title>Сергей Клоков — IT-специалист для малого бизнеса</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+    <link
+            rel="preload"
+            href="{{ url_for('static', filename='img/me.avif') }}"
+            as="image"
+            type="image/avif"
+            fetchpriority="high"
+    />
+
     <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -138,9 +146,18 @@
                     </div>
 
                     <div class="about-photo-placeholder">
-                        <img src="{{ url_for('static', filename='img/me.jpg') }}" alt="Сергей Клоков"
-                             class="about-photo">
+                        <picture>
+                            <source srcset="{{ url_for('static', filename='img/me.avif') }}" type="image/avif">
+                            <img
+                                    src="{{ url_for('static', filename='img/me.jpg') }}"
+                                    alt="Сергей Клоков"
+                                    class="about-photo"
+                                    decoding="async"
+                                    fetchpriority="high"
+                            >
+                        </picture>
                     </div>
+
                 </div>
             </div>
         </section>
