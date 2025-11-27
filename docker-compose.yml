@@ -18,7 +18,7 @@ services:
       --timeout 120
       --bind 0.0.0.0:5000
     volumes:
-      - ./app:/app
+      - ./:/app
     healthcheck:
       test: ["CMD-SHELL", "wget -qO- http://localhost:5000/health || exit 1"]
       interval: 20s
