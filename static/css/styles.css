@@ -362,6 +362,10 @@
       align-items: stretch;
     }
 
+    .about-desktop { display: block; }
+
+    .about-mobile { display: none; }
+
     .about-text p {
       flex: 1;
       display: flex;
@@ -933,6 +937,28 @@
 
       h2 {
         font-size: 24px;
+      }
+
+      .about-desktop {
+        display: none;
+      }
+
+      .about-mobile {
+        display: block;
+      }
+
+      .about-grid {
+        flex-direction: column;
+      }
+
+      .about-photo-placeholder {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 16px;
+      }
+
+      .about-text {
+        width: 100%;
       }
 
       .hero-subtitle {
