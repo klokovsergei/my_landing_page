@@ -139,6 +139,8 @@
     }
 
     .header-cta {
+      max-width: 50%;
+      white-space: nowrap;
       display: none;
     }
 
@@ -915,6 +917,9 @@
       }
 
       .header-cta {
+        max-width: 50%;
+        white-space: nowrap;
+        flex-shrink: 0;
         display: inline-flex;
       }
 
@@ -983,6 +988,8 @@
 
     @media (min-width: 1024px) {
       .header-cta {
+        max-weight: 50%;
+        white-space: nowrap;
         display: inline-flex;
       }
     }
