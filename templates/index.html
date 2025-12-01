@@ -2,8 +2,17 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8"/>
-    <title>Сергей Клоков — IT-специалист</title>
+    <title>Настройка АТС, CRM и автоматизация для малого бизнеса — Сергей Клоков</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description"
+          content="Настройка АТС, CRM и автоматизация процессов для малого бизнеса. Убираю пропущенные звонки, связываю АТС с CRM и настраиваю систему под ключ.">
+
+    <meta property="og:title" content="Настройка АТС, CRM и автоматизация для малого бизнеса — Сергей Клоков">
+    <meta property="og:description"
+          content="Выстраиваю телефонию, CRM, SIP-телефоны и автоматизации так, чтобы звонки не терялись, процессы были прозрачными, а бизнес — предсказуемым.">
+    <meta property="og:image" content="https://sklokov.ru/static/img/me.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sklokov.ru/">
 
     <link
             rel="preload"
@@ -71,9 +80,9 @@
                             Автоматизация, телефония и порядок в бизнес-процессах
                         </div>
 
-                        <h2 class="hero-title">
+                        <h1 class="hero-title">
                             Телефония и процессы, которые работают чётко и предсказуемо
-                        </h2>
+                        </h1>
 
                         <p class="hero-subtitle">
                             Навожу порядок в звонках, CRM и задачах: настраиваю АТС, SIP-телефоны,
@@ -170,21 +179,22 @@
                         </div>
                     </div>
 
-                        <div class="about-photo-placeholder">
-                            <picture>
-                                <source srcset="{{ url_for('static', filename='img/me.avif') }}" type="image/avif">
-                                <img
-                                        src="{{ url_for('static', filename='img/me.jpg') }}"
-                                        alt="Сергей Клоков"
-                                        class="about-photo"
-                                        decoding="async"
-                                        fetchpriority="high"
-                                >
-                            </picture>
-                        </div>
+                    <div class="about-photo-placeholder">
+                        <picture>
+                            <source srcset="{{ url_for('static', filename='img/me.avif') }}" type="image/avif">
+                            <img
+                                    src="{{ url_for('static', filename='img/me.jpg') }}"
+                                    alt="Сергей Клоков"
+                                    class="about-photo"
+                                    decoding="async"
+                                    fetchpriority="high"
+                            >
+                        </picture>
+                    </div>
 
 
                 </div>
+            </div>
         </section>
 
         <!-- SERVICES -->
@@ -196,22 +206,67 @@
                 </div>
 
                 <div class="services-grid fade-in fade-in-delay-1">
-                    <article class="service-card">
-                        <div class="service-icon">☎</div>
-                        <div class="service-title">Настройка АТС</div>
+                    <!-- CARD 1 -->
+                    <article class="service-card expandable">
+                        <div class="service-header">
+                            <div class="service-icon">☎</div>
+                            <div class="service-title">Настройка АТС</div>
+                        </div>
                         <p>Без пропущенных звонков и хаоса.</p>
+
+                        <!--<button class="service-toggle" type="button">Подробнее ▼</button>-->
+
+                        <div class="service-details">
+                            <ul>
+                                <li>Выстраиваю линии, IVR, очереди и приветствия.</li>
+                                <li>Настраиваю запись разговоров и контроль перезвонов.</li>
+                                <li>Подключаю SIP-телефоны и мобильные SIP-клиенты.</li>
+                                <li>Оптимизирую нагрузку, убираю технические ошибки.</li>
+                            </ul>
+                        </div>
+                        <button class="service-toggle" type="button">Подробнее ▼</button>
                     </article>
 
-                    <article class="service-card">
-                        <div class="service-icon">🔗</div>
-                        <div class="service-title">Интеграции</div>
+                    <!-- CARD 2 -->
+                    <article class="service-card expandable">
+                        <div class="service-header">
+                            <div class="service-icon">🔗</div>
+                            <div class="service-title">Интеграции</div>
+                        </div>
                         <p>ATS + CRM + аналитика в одном месте.</p>
+
+                        <!--<button class="service-toggle" type="button">Подробнее ▼</button>-->
+
+                        <div class="service-details">
+                            <ul>
+                                <li>Связываю АТС, CRM и аналитику в единую систему.</li>
+                                <li>Данные клиентов и звонков попадают автоматически.</li>
+                                <li>Устраняю ручной ввод и ошибки человеческого фактора.</li>
+                                <li>Настраиваю отчёты и аналитические воронки.</li>
+                            </ul>
+                        </div>
+                        <button class="service-toggle" type="button">Подробнее ▼</button>
                     </article>
 
-                    <article class="service-card">
-                        <div class="service-icon">🐍</div>
-                        <div class="service-title">Python-скрипты</div>
+                    <!-- CARD 3 -->
+                    <article class="service-card expandable">
+                        <div class="service-header">
+                            <div class="service-icon">🐍</div>
+                            <div class="service-title">Python-скрипты</div>
+                        </div>
                         <p>Очистка выгрузок, автоматизация отчётов.</p>
+
+                        <!--<button class="service-toggle" type="button">Подробнее ▼</button>-->
+
+                        <div class="service-details">
+                            <ul>
+                                <li>Автоматизирую отчёты, выгрузки, уведомления.</li>
+                                <li>Чищу и структурирую данные для аналитики.</li>
+                                <li>Создаю документы автоматически.</li>
+                                <li>Готовлю данные для импорта/экспорта.</li>
+                            </ul>
+                        </div>
+                        <button class="service-toggle" type="button">Подробнее ▼</button>
                     </article>
                 </div>
             </div>
@@ -275,7 +330,7 @@
 
 </div>
 
-<script>
+<!--<script>
     document.querySelector(".copy-email").addEventListener("click", async () => {
         const email = document.querySelector(".copy-email").dataset.email;
         await navigator.clipboard.writeText(email);
@@ -285,7 +340,87 @@
 
         setTimeout(() => toast.classList.remove("show"), 1200);
     });
+</script>-->
+
+<script>
+    document.addEventListener("click", async (e) => {
+        const btn = e.target.closest(".copy-email");
+        if (!btn) return;
+
+        const email = btn.dataset.email;
+
+        try {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                await navigator.clipboard.writeText(email);
+            } else {
+                const tempInput = document.createElement("input");
+                tempInput.value = email;
+                tempInput.style.position = "fixed";
+                tempInput.style.top = "-1000px";
+                document.body.appendChild(tempInput);
+
+                tempInput.select();
+                tempInput.setSelectionRange(0, 99999);
+
+                document.execCommand("copy");
+                tempInput.remove();
+            }
+
+            showCopyToast();
+        } catch (err) {
+            console.error("Ошибка копирования:", err);
+        }
+    });
+
+    function showCopyToast() {
+        const toast = document.getElementById("copy-toast");
+        if (!toast) return;
+
+        toast.classList.add("show");
+        setTimeout(() => toast.classList.remove("show"), 1200);
+    }
 </script>
 
+<script>
+    function isMobile() {
+        return window.matchMedia("(max-width: 767px)").matches;
+    }
+    // Гарантируем закрытие всех блоков при загрузке
+    document.querySelectorAll(".service-details").forEach(el => {
+        el.style.display = "none";
+    });
+
+    const toggles = document.querySelectorAll('.service-toggle');
+    toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+
+            /* 📱 МОБИЛЬНАЯ ЛОГИКА — открывается только выбранная карточка */
+            if (isMobile()) {
+                const details = btn.previousElementSibling;
+                const isOpen = details.style.display === 'block';
+
+                details.style.display = isOpen ? 'none' : 'block';
+                btn.textContent = isOpen ? 'Подробнее ▼' : 'Скрыть ▲';
+
+                return;
+            }
+
+            /* 🖥 ДЕСКТОП — по одному клику открываем весь ряд */
+            const anyOpen = [...document.querySelectorAll(".service-details")]
+                .some(el => el.style.display === 'block');
+            const openAll = !anyOpen;
+
+            document.querySelectorAll(".service-details").forEach(el => {
+                el.style.display = openAll ? 'block' : 'none';
+            });
+            document.querySelectorAll(".service-toggle").forEach(t => {
+                t.textContent = openAll ? 'Скрыть ▲' : 'Подробнее ▼';
+            });
+
+
+        });
+    });
+
+</script>
 </body>
 </html>
