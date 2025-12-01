@@ -13,7 +13,7 @@ services:
       - GUNICORN_WORKERS=3
       - APP_ENV=production
     command: >
-      gunicorn app:app
+      gunicorn wsgi:app
       --workers ${GUNICORN_WORKERS:-3}
       --timeout 120
       --bind 0.0.0.0:5000
