@@ -40,6 +40,7 @@ services:
       - ./nginx/cloudflare_ips.conf:/etc/nginx/cloudflare_ips.conf
       - ./nginx/logs:/var/log/nginx
       - /etc/letsencrypt:/etc/letsencrypt:ro
+      - /var/www/certbot:/var/www/certbot
     depends_on:
       - personal_site
     networks:
