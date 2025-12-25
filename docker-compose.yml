@@ -28,7 +28,7 @@ services:
     networks:
       - proxy
   nginx:
-    image: nginx:latest
+    image: nginx:1.25-alpine
     container_name: nginx_reverse
     restart: unless-stopped
     ports:

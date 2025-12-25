@@ -14,20 +14,30 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sklokov.ru/">
 
+    <link rel="preload"
+          href="/static/fonts/roboto/Roboto-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="preload"
+          href="/static/fonts/roboto/Roboto-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="preload"
+          href="/static/fonts/roboto/Roboto-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
     <link
             rel="preload"
             href="{{ url_for('static', filename='img/me.avif') }}"
             as="image"
             type="image/avif"
             fetchpriority="high"
-    />
-
-    <!-- Шрифты -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
     />
 
     <!-- Flask CSS -->
@@ -218,8 +228,6 @@
                         </div>
                         <p>Без пропущенных звонков и хаоса.</p>
 
-                        <!--<button class="service-toggle" type="button">Подробнее ▼</button>-->
-
                         <div class="service-details">
                             <ul>
                                 <li>Выстраиваю линии, IVR, очереди и приветствия.</li>
@@ -239,8 +247,6 @@
                         </div>
                         <p>ATS + CRM + аналитика в одном месте.</p>
 
-                        <!--<button class="service-toggle" type="button">Подробнее ▼</button>-->
-
                         <div class="service-details">
                             <ul>
                                 <li>Связываю АТС, CRM и аналитику в единую систему.</li>
@@ -259,8 +265,6 @@
                             <div class="service-title">Python-скрипты</div>
                         </div>
                         <p>Очистка выгрузок, автоматизация отчётов.</p>
-
-                        <!--<button class="service-toggle" type="button">Подробнее ▼</button>-->
 
                         <div class="service-details">
                             <ul>
