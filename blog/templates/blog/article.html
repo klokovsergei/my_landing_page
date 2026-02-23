@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{{ article.title }} — Сергей Клоков</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="{{ article.description }}">
+
+    <meta property="og:title" content="{{ article.title }} — Сергей Клоков">
+    <meta property="og:description" content="{{ article.description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sklokov.ru/blog/{{ article.id }}">
+
+    <link rel="preload"
+          href="/static/fonts/roboto/Roboto-Regular.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="preload"
+          href="/static/fonts/roboto/Roboto-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="preload"
+          href="/static/fonts/roboto/Roboto-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossorigin>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+<div class="page">
+
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <div class="logo-mark">SK</div>
+                    <div>
+                        <div>Сергей Клоков</div>
+                        <div class="logo-sub">IT-специалист</div>
+                    </div>
+                </div>
+
+                <nav class="nav">
+                    <a href="/#hero">Главная</a>
+                    <a href="/#services">Услуги</a>
+                    <a href="/#contacts">Контакты</a>
+                </nav>
+
+                <a href="https://t.me/klokovsergey" class="btn btn-outline header-cta" target="_blank">
+                    Написать в Telegram
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="subpage">
+        <section class="article-page">
+            <div class="container article-container">
+                <article class="article-content fade-in">
+                    <p class="article-meta">{{ article.date }} · {{ article.read_time }}</p>
+                    <h1 class="article-title">{{ article.title }}</h1>
+
+                    {% if article.description %}
+                    <p class="article-lead">{{ article.description }}</p>
+                    {% endif %}
+
+                    <div class="article-body">{{ article.html | safe }}</div>
+
+                    <div class="article-cta">
+                        <a href="https://sklokov.ru/" class="btn btn-outline">Вернуться на главную</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div>© 2025 · Сергей Клоков</div>
+                <div>ATS · CRM · Python · Автоматизация</div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const codeBlocks = document.querySelectorAll(
+      ".article-body pre > code.language-text, .article-body pre > code.language-plaintext"
+    );
+
+    codeBlocks.forEach((code) => {
+      const pre = code.parentElement;
+      if (!pre || !pre.parentElement) return;
+
+      const fullText = code.textContent || "";
+
+      const card = document.createElement("div");
+      card.className = "article-code-card is-collapsed";
+
+      const head = document.createElement("div");
+      head.className = "article-code-head";
+      head.innerHTML = `
+        <button type="button" class="article-copy-btn">COPY</button>
+      `;
+
+      const toggle = document.createElement("button");
+      toggle.type = "button";
+      toggle.className = "article-code-toggle";
+      toggle.textContent = "Показать полностью ▼";
+
+      pre.parentElement.insertBefore(card, pre);
+      card.appendChild(head);
+      card.appendChild(pre);
+      card.appendChild(toggle);
+
+      const copyBtn = head.querySelector(".article-copy-btn");
+      copyBtn.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText(fullText);
+          copyBtn.textContent = "COPIED";
+          setTimeout(() => (copyBtn.textContent = "COPY"), 1200);
+        } catch (_) {
+          copyBtn.textContent = "ERROR";
+          setTimeout(() => (copyBtn.textContent = "COPY"), 1200);
+        }
+      });
+
+      toggle.addEventListener("click", () => {
+        const collapsed = card.classList.toggle("is-collapsed");
+        toggle.textContent = collapsed ? "Показать полностью ▼" : "Свернуть ▲";
+      });
+    });
+  });
+</script>
+
+
+</body>
+</html>

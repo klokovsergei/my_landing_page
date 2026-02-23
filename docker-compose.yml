@@ -9,6 +9,8 @@ services:
     restart: unless-stopped
     expose:
       - "5000"
+    ports:
+      - "5050:5000"
     environment:
       - GUNICORN_WORKERS=3
       - APP_ENV=production

@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 
+from blog import blog_bp
+
 
 def create_app():
     app = Flask(__name__)
@@ -12,6 +14,8 @@ def create_app():
     @app.route("/health")
     def health():
         return "ok", 200
+
+    app.register_blueprint(blog_bp, url_prefix='/blog')
 
     return app
 
