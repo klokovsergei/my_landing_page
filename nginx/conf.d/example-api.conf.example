@@ -1,3 +1,8 @@
+#
+# Example API vhost template.
+# Copy this file back to *.conf only after replacing api.example.com,
+# certificate paths, and project_container_name with real values.
+#
 server {
     listen 80;
     server_name api.example.com;
